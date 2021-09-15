@@ -20,5 +20,5 @@ public class Controller {
     public String login() { return "/login"; }
     @GetMapping("/next")
     public String next(){ return "/next";}
-    
+
 }
