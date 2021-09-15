@@ -3,17 +3,24 @@
 <html lang="en">
 <th:block th:fragment="content">
     <ul>
+
         <li onclick="kakaoLogin();">
             <a href="javascript:void(0)">
                 <span>카카오 로그인</span>
                 <button type="button" id="" class="btn btnEvent">
-                    <a href="/login" class="btn_3"> <img src="/bootstrap/img/kakao_login.png" alt="btnImages" class="btnImages"></a>
+                    <img src="/bootstrap/img/kakao_login.png" alt="btnImages" class="btnImages">
                 </button>
             </a>
         </li>
+
+
         <li onclick="kakaoLogout();">
             <a href="javascript:void(0)">
+<<<<<<< Updated upstream
                 <span> 카카오로그아웃12`</span>
+=======
+                <span>카카오 로그아웃!!!</span>
+>>>>>>> Stashed changes
 
 
             </a>
@@ -32,14 +39,20 @@
                         url: '/v2/user/me',
                         success: function (response) {
                             console.log(response)
+                            // alert('answer' + response)
+                            location.href='http://localhost:8080/next';
                         },
                         fail: function (error) {
                             console.log(error)
+                            // alert('mid error' + error)error
+                            location.href="/index";
                         },
                     })
                 },
                 fail: function (error) {
                     console.log(error)
+                    // alert('error'+ error)
+                    location.href="/index";
                 },
             })
         }
